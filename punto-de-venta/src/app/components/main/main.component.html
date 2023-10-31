@@ -1,0 +1,39 @@
+<!-- main-page.component.html -->
+<div class="main-page-container">
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Pulpería la Legua</h1>
+        <div class="user-info">
+            <p *ngIf="currentUser">{{ currentUser.email }}</p>
+            <button (click)="onlogout()">Cerrar Sesión</button>
+            <img src="https://scontent.fsyq1-1.fna.fbcdn.net/v/t39.30808-6/305993415_453949056755691_5413879430289930291_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gF2hbRkShUgAX_T1Oy8&_nc_ht=scontent.fsyq1-1.fna&oh=00_AfBwR2G72TojbEEJ9NLr0CvDi5TWfuDUq9HudKFOz6lDHA&oe=65464237"
+                alt="Imagen de bienvenida" style="width: 100px; height: auto;">
+        </div>
+    </div>
+
+    <!-- Menú de navegación -->
+    <div class="navigation-menu">
+        <ul>
+            <br>
+            <!-- <li><a [routerLink]="['/dashboard']">Dashboard</a></li>-->
+            <div class="icon-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/2359/2359751.png" alt="Facturar">
+                <li><a [routerLink]="['/venta']">Facturar</a></li>
+            </div>
+            <br>
+            <div class="icon-button">
+                <img src="https://cdn-icons-png.flaticon.com/512/2897/2897785.png" alt="Inventario">
+                <li><a [routerLink]="['/products']">Inventario</a></li>
+            </div>
+            <br>
+            <!-- <li><a [routerLink]="['/historial-ventas']">Historial Ventas</a></li>-->
+            <!-- <li><a [routerLink]="['/reports']">Reportes</a></li>-->
+            <div class="icon-button">
+                <img src="https://images.vexels.com/media/users/3/132335/isolated/preview/4af43ce1082231cba5e5aa60fbb03f2f-iconos-de-circulo-de-personal.png"
+                    alt="Clientes">
+                <li><a [routerLink]="['/clients']">Clientes</a></li>
+            </div>
+            <br>
+        </ul>
+    </div>
+</div>

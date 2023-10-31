@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="products.component.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>Pulpería la Legua-Inventario</h1>
+        <div class="user-info">
+            <img src="https://scontent.fsyq1-1.fna.fbcdn.net/v/t39.30808-6/305993415_453949056755691_5413879430289930291_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gF2hbRkShUgAX_T1Oy8&_nc_ht=scontent.fsyq1-1.fna&oh=00_AfBwR2G72TojbEEJ9NLr0CvDi5TWfuDUq9HudKFOz6lDHA&oe=65464237"
+                alt="Imagen de bienvenida" style="width: 100px; height: auto;">
+        </div>
+    </div>
+    <br>
+    <div class="row justify-content-between">
+        <div class="col-md-4 mb-2">
+            <button type="submit" routerLink="/main" class="custom-button">Regresar</button>
+        </div>
+    </div>
+    <!-- Agregar botones -->
+    <div class="button-container">
+        <div class="centered-buttons">
+            <button class="button add-button">Agregar Producto</button>
+            <button class="button edit-button">Editar Producto</button>
+            <button class="button delete-button">Eliminar Producto</button>
+        </div>
+    </div>
+    <main>
+        <div class="container" id="lista-productos">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre del Producto</th>
+                        <th>Marca</th>
+                        <th>Código de Barras</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products">
+                        <td><img [src]="product.imageSrc" alt="{{product.name}}" class="product-image"></td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.brand}}</td>
+                        <td>{{product.barcode}}</td>
+                        <td>{{product.price}}</td>
+                        <td>
+                            <input type="number" [(ngModel)]="product.quantity" min="0">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </main>
+</body>
+
+</html>

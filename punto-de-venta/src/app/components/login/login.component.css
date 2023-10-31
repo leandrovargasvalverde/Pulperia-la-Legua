@@ -1,0 +1,114 @@
+/* Estilos para el contenedor principal */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0837d6;
+  /* Azul oscuro para el fondo del contenedor */
+}
+
+/* Estilos para el formulario */
+form {
+  width: 300px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  /* Centrar el contenido del formulario */
+  font-family: Arial, sans-serif;
+  display: flex;
+  /* Usar un flex container para centrar los elementos internos */
+  flex-direction: column;
+  align-items: center;
+  /* Centrar horizontalmente los elementos internos */
+  margin: 10px;
+  /* Agregar margen alrededor del formulario */
+}
+
+/* Estilos para etiquetas y campos de entrada */
+.form-group {
+  margin: 10px 0;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  /* Aumentar el espacio de relleno (padding) */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #0837d6;
+  font-weight: bold;
+  margin-left: -12px;
+  font-size: 18px;
+  /* Aumentar el tamaño de fuente a 18px */
+}
+
+/* Estilos para los botones */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0837d6;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  /* Agregar transición para suavizar el cambio de colores */
+}
+
+button:hover {
+  background-color: #ffffff;
+  /* Color de fondo blanco al pasar el mouse */
+  color: #0837d6;
+  /* Texto azul al pasar el mouse */
+  border: 1px solid #000;
+  /* Agregar un borde negro al pasar el mouse */
+}
+
+/* Estilos para el título "BIENVENIDO" */
+h2 {
+  margin: 0;
+  padding: 20px;
+  background-color: #0837d6;
+  /* Color de fondo azul */
+  color: #0837d6;
+  /* Texto blanco */
+  background-clip: text;
+  /* Aplicar el fondo solo al texto */
+  -webkit-background-clip: text;
+  /* Para navegadores webkit (Safari, Chrome) */
+  font-family: Arial, sans-serif;
+  /* Fuente Arial para el título */
+  font-weight: bold;
+  /* Establecer el texto en negrita */
+}
+
+/* Estilos para el texto del placeholder */
+input::placeholder {
+  color: #ffffff;
+  /* Texto blanco para el placeholder */
+  font-weight: normal;
+  /* Restablecer la negrita del placeholder (si es necesario) */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}

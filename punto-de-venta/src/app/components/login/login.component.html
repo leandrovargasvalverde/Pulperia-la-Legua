@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bienvenido</title>
+  <link rel="stylesheet" type="text/css" href="login.component.css">
+</head>
+
+<body>
+  <div class="container">
+    <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+      <h2>BIENVENIDO</h2>
+      <img
+        src="https://scontent.fsyq1-1.fna.fbcdn.net/v/t39.30808-6/305993415_453949056755691_5413879430289930291_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gF2hbRkShUgAX_T1Oy8&_nc_ht=scontent.fsyq1-1.fna&oh=00_AfBwR2G72TojbEEJ9NLr0CvDi5TWfuDUq9HudKFOz6lDHA&oe=65464237"
+        alt="Imagen de bienvenida">
+
+      <div class="form-group">
+        <input type="email" id="email" formControlName="email" required class="input-field"
+          placeholder="Introduce tu correo electrónico">
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" formControlName="password" required class="input-field"
+          placeholder="Introduce tu contraseña">
+      </div>
+      <div class="form-group">
+        <a href="/forgot-password">¿Olvidaste tu contraseña?</a>
+      </div>
+      <button type="submit">INICIAR SESIÓN</button>
+      <button type="submit" routerLink="/register">REGISTRAR</button>
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Encabezado de la página -->
+
+</head>
+
+<body>
+    <main>
+        <div class="navbar">
+            <h1>Pulpería la Legua-Facturación</h1>
+            <div class="user-info">
+                <img src="https://scontent.fsyq1-1.fna.fbcdn.net/v/t39.30808-6/305993415_453949056755691_5413879430289930291_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=gF2hbRkShUgAX_T1Oy8&_nc_ht=scontent.fsyq1-1.fna&oh=00_AfBwR2G72TojbEEJ9NLr0CvDi5TWfuDUq9HudKFOz6lDHA&oe=65464237"
+                    alt="Imagen de bienvenida" style="width: 100px; height: auto;">
+            </div>
+        </div>
+        <!-- Otras partes de tu HTML -->
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+
+                    <form id="procesar-pago" action="#" #form="ngForm">
+                        <div id="carrito" class="form-group table-responsive">
+                            <table class="form-group table" id="lista-compra">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Imagen</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Precio</th>
+                                        <th scope="col">Eliminar</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of products">
+                                        <td><img [src]="product.imageSrc" alt="{{ product.name }}"
+                                                class="product-image"></td>
+                                        <td>{{ product.name }}</td>
+                                        <td>{{ product.price }}</td>
+                                        <td>
+                                            <input type="number" [(ngModel)]="product.quantity" min="0"
+                                                [ngModelOptions]="{standalone: true}" name="quantity"
+                                                (input)="calcularTotal()" />
+                                        </td>
+                                        <td>₡ {{ product.price * product.quantity }}</td>
+                                        <td>
+                                            <button class="btn btn-danger"
+                                                (click)="eliminarProducto(product.id)">Eliminar</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">SUB TOTAL :</th>
+                                    <th scope="col">
+                                        <span id="subtotal">₡ {{ subtotal }}</span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">DESCUENTO :</th>
+                                    <th scope="col">
+                                        <span id="iva">₡ {{ iva }}</span>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th colspan="4" scope="col" class="text-right">TOTAL :</th>
+                                    <th scope="col">
+                                        <span id="total">₡ {{ total }}</span>
+                                    </th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row justify-content-between">
+                            <div class="col-md-4 mb-2">
+                                <button type="submit" routerLink="/main" class="custom-button">Regresar</button>
+                            </div>
+                            <div class="col-md-4">
+                                <button type="button" class="custom-button" (click)="realizarCompra()">Realizar
+                                    compra</button>
+                            </div>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

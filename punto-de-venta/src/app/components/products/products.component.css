@@ -1,0 +1,167 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos para las imágenes */
+.product-image {
+    max-width: 100px;
+    max-height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Estilos para los botones */
+.btn {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+h1 {
+    text-align: center;
+}
+
+input[type="number"] {
+    width: 50px;
+    text-align: center;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #102fb9;
+    /* Cambia el color de fondo a un azul más oscuro */
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    /* Expande a lo ancho completo */
+}
+
+/* Estilos para el título en el navbar */
+.navbar h1 {
+    margin: 0;
+    font-size: 36px;
+    /* Aumenta el tamaño de fuente */
+}
+
+/* Estilos para la sección de información del usuario en el navbar */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+/* Estilos para el botón de cierre de sesión en el navbar */
+.user-info button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    margin: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* Tamaño personalizado para los botones */
+    width: 150px;
+    /* Ancho */
+    height: 40px;
+    /* Altura */
+    display: inline-block;
+    /* Asegura que los botones se muestren en línea */
+    vertical-align: middle;
+    /* Alinea verticalmente los botones en el medio */
+}
+
+.add-button {
+    background-color: #102fb9;
+    color: #fff;
+}
+
+.add-button:hover {
+    background-color: #001f8f;
+}
+
+.edit-button {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #d32f2a;
+}
+
+.centered-buttons {
+    text-align: center;
+}
+
+.centered-buttons button {
+    margin: 0 10px;
+}
+
+/* Estilo para la clase custom-button (aplicado a ambos botones) */
+.custom-button {
+    background-color: #0837d6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px;
+}
+
+.custom-button:hover {
+    background-color: #ffffff;
+    color: #0837d6;
+    border: 1px solid #000;
+}
+
+body {
+    background-color: #fff;
+    /* Fondo blanco */
+}
